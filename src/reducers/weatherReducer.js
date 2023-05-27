@@ -1,5 +1,4 @@
 const initialState = {
-  // query: "auto:ip",
   temperatureCelsius: "",
   temperatureFahrenheit: "",
   city: "",
@@ -28,12 +27,6 @@ const initialState = {
   firstDayConditionText: "",
   secondDayConditionText: "",
   thirdDayConditionText: "",
-  // uvIndex: "",
-  // uvStyle: "",
-  // uvTitle: "",
-  // airQuality: "",
-  // airQualityStyle: "",
-  // airQualityTitle: "",
 };
 
 const weatherReducer = (state = initialState, action) => {
@@ -41,7 +34,6 @@ const weatherReducer = (state = initialState, action) => {
     case "SET_WEATHER_DATA":
       return {
         ...state,
-        // query: action.payload.query,
         temperatureCelsius: action.payload.temperatureCelsius,
         temperatureFahrenheit: action.payload.temperatureFahrenheit,
         country: action.payload.country,
@@ -70,12 +62,6 @@ const weatherReducer = (state = initialState, action) => {
         firstDayConditionIcon: action.payload.firstDayConditionIcon,
         secondDayConditionIcon: action.payload.secondDayConditionIcon,
         thirdDayConditionIcon: action.payload.thirdDayConditionIcon,
-        // uvIndex: action.payload.uvIndex,
-        // uvStyle: action.payload.uvStyle,
-        // uvTitle: action.payload.uvTitle,
-        // airQuality: action.payload.airQuality,
-        // airQualityStyle: action.payload.airQualityStyle,
-        // airQualityTitle: action.payload.airQualityTitle,
       };
     default:
       return state;
